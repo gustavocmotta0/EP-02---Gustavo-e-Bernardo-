@@ -5,4 +5,4 @@ def rolar_dados(n):
         a = random.randint(1,6)
         lista.append(a)
     return lista
-print(rolar_dados(5))
+
