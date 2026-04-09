@@ -19,5 +19,9 @@ def remover_dado(rolados, guardados, indice_removido):
     x = [rolados, guardados]
     return x
 
-
+def calcula_pontos_regra_simples(faces_roladas):
+    pontos = {1: faces_roladas.count(1), 2: faces_roladas.count(2) * 2,
+              3: faces_roladas.count(3) * 3, 4: faces_roladas.count(4) * 4,
+              5: faces_roladas.count(5) * 5, 6: faces_roladas.count(6) * 6}
+    return pontos
 
