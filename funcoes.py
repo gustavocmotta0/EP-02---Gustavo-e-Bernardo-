@@ -6,6 +6,6 @@ def rolar_dados(n):
         lista.append(a)
     return lista
 def guardar_dado(lista_dados, lista_dg, i):
-    lista_dg.append(lista_dados[i])
-    fim = [lista_dados,lista_dg] 
-    return fim
+    lista_dg.append(lista_dados[i])  
+    lista_dados.pop(i)              
+    return [lista_dados, lista_dg]  
