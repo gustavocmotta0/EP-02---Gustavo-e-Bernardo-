@@ -2,6 +2,6 @@ import random
 def rolar_dados(n):
     lista = []
     for i in range(0,n):
-        lista.append(random.randint)
+        a = random.randint(0,6)
+        lista.append(a)
     return lista
-print (rolar_dados(3))
