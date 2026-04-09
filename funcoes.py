@@ -1,3 +1,4 @@
 import random as rd
-def rolar_dados(n)
-    lista[]
+def rolar_dados(n):
+    lista = []
+    
