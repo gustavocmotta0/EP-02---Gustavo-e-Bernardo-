@@ -14,6 +14,7 @@ def guardar_dado(lista_dados, lista_dg, i):
 
 
 def remover_dado(rolados, guardados, indice_removido):  
-    x = [guardados, rolados]
+    rolados.append(guardados)
+    x = [rolados, guardados]
     return x
 
