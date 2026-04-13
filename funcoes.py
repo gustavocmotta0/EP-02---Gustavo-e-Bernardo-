@@ -34,6 +34,9 @@ def calcula_pontos_regra_simples(faces_roladas):
         return 15
     if faces_roladas in [[1,1,1,1,1] , [2,2,2,2,2] , [3,3,3,3,3], [4,4,4,4,4], [5,5,5,5,5], [6,6,6,6,6]]:
         return 50
+    else: 
+        return sum(faces_roladas)
+        
     
 
 
