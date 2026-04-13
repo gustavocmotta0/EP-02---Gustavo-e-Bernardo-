@@ -25,7 +25,7 @@ def calcula_pontos_regra_simples(faces_roladas):
               5: faces_roladas.count(5) * 5, 6: faces_roladas.count(6) * 6}
     return pontos
 
-def calcula_pontos_regra_simples(faces_roladas):
+def calcula_pontos_soma(faces_roladas):
     k = 0
     faces_roladas = sorted(faces_roladas)
     if faces_roladas in [[1,2,3,4,5][2,3,4,5,6]]:
