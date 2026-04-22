@@ -26,22 +26,15 @@ def calcula_pontos_regra_simples(faces_roladas):
     return pontos
 
 def calcula_pontos_soma(faces_roladas):
-    k = 0
-    faces_roladas = sorted(faces_roladas)
-    if faces_roladas in [[1,2,3,4,5][2,3,4,5,6]]:
-        return 30
-    if faces_roladas in [[1,2,3,4] , [2,3,4,5] , [3,4,5,6]]:
-        return 15
-    if faces_roladas in [[1,1,1,1,1] , [2,2,2,2,2] , [3,3,3,3,3], [4,4,4,4,4], [5,5,5,5,5], [6,6,6,6,6]]:
-        return 50
-    else: 
-        i= 0 
-        while i!=5:
-            soma =  faces_roladas[i] + soma
-            i = i  + 1
-        return soma
+    i = 0
+    soma = 0
+
+    while i!=len(faces_roladas):
+        soma =  faces_roladas[i] + soma
+        i = i  + 1
+    return soma
         
-    
+    print(calcula_pontos_soma([2, 3, 4, 5, 2]))
 
 
             
