@@ -34,7 +34,7 @@ def calcula_pontos_soma(faces_roladas):
         i = i  + 1
     return soma
         
-    print(calcula_pontos_soma([2, 3, 4, 5, 2]))
+    
 
 
             
