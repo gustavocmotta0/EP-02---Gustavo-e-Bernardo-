@@ -35,7 +35,7 @@ def calcula_pontos_soma(faces_roladas):
     return soma
         
 def calcula_pontos_sequencia_baixa(faces):
-    faces = faces.sorted
+    faces = sorted(faces)
     if [1,2,3,4] in faces or  [2,3,4,5] in faces or  [3,4,5,6] in faces:
         return 15
     return 0 
