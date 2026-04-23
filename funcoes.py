@@ -33,9 +33,6 @@ def calcula_pontos_soma(faces_roladas):
         soma =  faces_roladas[i] + soma
         i = i  + 1
     return soma
-        
-def calcula_pontos_sequencia_baixa(faces):
-    faces = sorted(faces)
 
     def calcula_pontos_sequencia_baixa(faces):
         faces = sorted(faces)
