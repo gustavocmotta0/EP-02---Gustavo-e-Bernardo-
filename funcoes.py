@@ -42,6 +42,13 @@ def calcula_pontos_sequencia_baixa(faces):
     if 3 in faces and 4 in faces and 5 in faces and 6 in faces:
         return 15
     return 0
+
+def calcula_pontos_sequencia_alta(faces):
+    if 1 in faces and 2 in faces and 3 in faces and 4 in faces and 5 in faces:
+        return 30
+    if 2 in faces and 3 in faces and 4 in faces and 5 in faces and 6 in faces:
+        return 30
+    return 0
     
 
 
