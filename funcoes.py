@@ -56,12 +56,12 @@ def calcula_pontos_full_house(dados):
     soma = 0
     if dados[0] == dados[1] and dados[2] == dados[3] == dados[4] and dados[0] != dados[2]:
         for i in range(len(dados)):
-            soma += soma
+            soma += dados[i]
             return soma
 
     if dados[0] == dados[1] == dados[2] and dados[3] == dados[4] and dados[0] != dados[3]:
         for i in range(len(dados)):
-            soma += soma
+            soma += dados[i]
             return soma
 
         
