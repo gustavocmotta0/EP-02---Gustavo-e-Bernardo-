@@ -55,13 +55,20 @@ def calcula_pontos_full_house(dados):
         for j in range(i + 1, len(dados)):
             if dados[i] > dados[j]:
                 dados[i], dados[j] = dados[j], dados[i]
-    
+    soma = 0
     if dados[0] == dados[1] and dados[2] == dados[3] == dados[4] and dados[0] != dados[2]:
-        return sum(dados)
+        for i in range(len(dados)):
+            soma += soma
+            return soma
+
     if dados[0] == dados[1] == dados[2] and dados[3] == dados[4] and dados[0] != dados[3]:
-        return sum(dados)
+        for i in range(len(dados)):
+            soma += soma
+            return soma
+
+        
     
-    return 0
+    return 0 
     
 
 
