@@ -49,6 +49,19 @@ def calcula_pontos_sequencia_alta(faces):
     if 2 in faces and 3 in faces and 4 in faces and 5 in faces and 6 in faces:
         return 30
     return 0
+
+def calcula_pontos_full_house(dados):
+    for i in range(len(dados)):
+        for j in range(i + 1, len(dados)):
+            if dados[i] > dados[j]:
+                dados[i], dados[j] = dados[j], dados[i]
+    
+    if dados[0] == dados[1] and dados[2] == dados[3] == dados[4] and dados[0] != dados[2]:
+        return sum(dados)
+    if dados[0] == dados[1] == dados[2] and dados[3] == dados[4] and dados[0] != dados[3]:
+        return sum(dados)
+    
+    return 0
     
 
 
