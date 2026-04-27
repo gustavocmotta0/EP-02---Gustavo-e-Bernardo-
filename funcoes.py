@@ -51,10 +51,8 @@ def calcula_pontos_sequencia_alta(faces):
     return 0
 
 def calcula_pontos_full_house(dados):
-    for i in range(len(dados)):
-        for j in range(i + 1, len(dados)):
-            if dados[i] > dados[j]:
-                dados[i], dados[j] = dados[j], dados[i]
+    dados = sorted(dados)
+    
     soma = 0
     if dados[0] == dados[1] and dados[2] == dados[3] == dados[4] and dados[0] != dados[2]:
         for i in range(len(dados)):
