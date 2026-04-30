@@ -103,6 +103,17 @@ def calcula_pontos_regra_avancada(dados):
         'sequencia_alta': calcula_pontos_sequencia_alta(dados),
         'sequencia_baixa': calcula_pontos_sequencia_baixa(dados)}
 
+def faz_jogada(dados, cat, cart):
+    pontos_simples = calcula_pontos_regra_simples(dados)
+    pontos_avancados = calcula_pontos_regra_avancada(dados)
+
+    if cat in pontos_simples:
+        cart[cat] = pontos_simples[cat]
+    elif cat in pontos_avancados:
+        cart[cat] = pontos_avancados[cat]
+
+    return cart
+
 
     
 
