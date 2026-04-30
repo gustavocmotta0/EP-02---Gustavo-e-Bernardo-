@@ -81,7 +81,17 @@ def calcula_pontos_quadra(dados):
             return soma
         
     return 0
-    
 
+def calcula_pontos_quadra(dados):
+
+    dados = sorted(dados)
+    if len(dados) < 5:
+        return 0 
+    for i in range(4,len(dados)):
+        if dados[i-4] == dados[i - 3] == dados[i-2] == dados[i-1] == dados[i]:
+    
+            return 50
+        
+    return 0
 
         
