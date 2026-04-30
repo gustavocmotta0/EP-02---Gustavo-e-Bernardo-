@@ -94,4 +94,20 @@ def calcula_pontos_quina(dados):
         
     return 0
 
-        
+def calcula_pontos_regra_avancada(dados):
+    a = calcula_pontos_soma(dados):
+    b = calcula_pontos_sequencia_baixa(dados)
+    c = calcula_pontos_sequencia_alta(dados)
+    e = calcula_pontos_regra_avancada(dados)
+    f = calcula_pontos_full_house(dados)
+    g = calcula_pontos_quina(dados)
+    h = calcula_pontos_quadra (dados)
+    return {
+    'cinco_iguais': g,
+    'full_house': f,
+    'quadra': h,
+    'sem_combinacao': a,
+    'sequencia_alta': c,
+    'sequencia_baixa': b
+    }
+
