@@ -80,11 +80,6 @@ def calcula_pontos_quadra(dados):
                 soma += dados[i]
             return soma
         
-        if dados[i-1] == dados[i-2] == dados[i-1] == dados[i]:
-            for i in range(0,len(dados)):
-                soma += dados[i]
-            return soma
-
     return 0
     
 
