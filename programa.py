@@ -61,7 +61,7 @@ for rodada in range(12):
             print(f"Dados rolados: {dados_rolados}")
             print(f"Dados guardados: {dados_guardados}")
 
-# Calcula pontuação final
+
 pontuacao = 0
 pontos_simples = 0
 
