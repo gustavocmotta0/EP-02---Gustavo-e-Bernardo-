@@ -71,17 +71,19 @@ def calcula_pontos_full_house(dados):
 def calcula_pontos_quadra(dados):
 
     dados = sorted(dados)
-
-    soma = 0
-    if dados[0] == dados[1] == dados[2] == dados[3]:
-        for i in range(len(dados)):
-            soma += dados[i]
-        return soma
-    
-    if dados[1] == dados[2] == dados[3] == dados[4]:
-        for i in range(len(dados)):
-            soma += dados[i]
-        return soma
+    if len(dados) > 4:
+        return 0 
+    for i in range(4,len(dados)):
+        soma = 0
+        if dados[i - 4] == dados[i-3] == dados[i-2] == dados[i-1]:
+            for i in range(len(dados)):
+                soma += dados[i]
+            return soma
+        
+        if dados[i-1] == dados[i-2] == dados[i-1] == dados[i]:
+            for i in range(len(dados)):
+                soma += dados[i]
+            return soma
 
     return 0
     
