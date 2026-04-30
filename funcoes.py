@@ -82,7 +82,7 @@ def calcula_pontos_quadra(dados):
         
     return 0
 
-def calcula_pontos_quadra(dados):
+def calcula_pontos_quina(dados):
 
     dados = sorted(dados)
     if len(dados) < 5:
