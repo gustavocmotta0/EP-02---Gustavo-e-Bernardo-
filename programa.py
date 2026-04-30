@@ -1,6 +1,6 @@
 import random
 
-cartela = cria_cartela()
+cartela = imprime_cartela()
 
 for rodada in range(12):
     dados_rolados = [random.randint(1, 6) for _ in range(5)]
