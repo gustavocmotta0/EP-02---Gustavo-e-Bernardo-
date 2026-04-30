@@ -107,8 +107,8 @@ def faz_jogada(dados, cat, cart):
     pontos_simples = calcula_pontos_soma(dados)
     pontos_avancados = calcula_pontos_regra_avancada(dados)
 
-    if int(cat) in pontos_simples:
-        cart[cat] = pontos_simples[int(cat)]
+    if cat in pontos_simples:
+        cart[cat] = pontos_simples[abs(cat)]
     elif cat in pontos_avancados:
         cart[cat] = pontos_avancados[cat]
 
