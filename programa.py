@@ -24,7 +24,32 @@ combinacoes_avancadas = ["sem_combinacao", "quadra", "full_house", "sequencia_ba
 todas_combinacoes = combinacoes_simples + combinacoes_avancadas
  
 imprime_cartela(cartela)
-
+dados_rolados = rolar_dados(5)
+dg = [] #dados gurdados
+ 
+print(f"Dados rolados: {dados_rolados}")
+print(f"Dados guardados: {dg}")
+print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
+ 
+k = 0
+for i in range(12):
+    rodada_encerrada = False
+    while not rodada_encerrada:
+        acao = input(">")
+ 
+        if acao == "1":
+            print("Digite o índice do dado a ser guardado (0 a 4):")
+            l = int(input(">"))
+            resultado = guardar_dado(dados_rolados, dg, l)
+            dados_rolados = resultado[0]
+            dg = resultado[1]
+ 
+        elif acao == "2":
+            print("Digite o índice do dado a ser removido (0 a 4):")
+            l = int(input(">"))
+            resultado = remover_dado(dados_rolados, dg, l)
+            dados_rolados = resultado[0]
+            dg = resultado[1]
 
 
 
