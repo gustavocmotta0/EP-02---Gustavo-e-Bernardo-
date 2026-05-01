@@ -51,8 +51,83 @@ for i in range(12):
             dados_rolados = resultado[0]
             dg = resultado[1]
 
-
-
-
-
-
+ 
+        elif acao == "3":
+            if k <= 1:
+                dados_rolados = rolar_dados(len(dados_rolados))
+                k += 1
+            else:
+                print("Você já usou todas as rerrolagens.")
+ 
+        elif acao == "4":
+            imprime_cartela(cartela)
+ 
+        elif acao == "0":
+            print("Digite a combinação desejada:")
+            jogada_feita = False
+            while not jogada_feita:
+                categoria = input(">")
+ 
+                if categoria not in todas_combinacoes:
+                    print("Combinação inválida. Tente novamente.")
+                    continue
+ 
+                if categoria in combinacoes_simples:
+                    chave = int(categoria)
+                    if cartela['regra_simples'][chave] != -1:
+                        print("Essa combinação já foi utilizada.")
+                        continue
+                else:
+                    if cartela['regra_avancada'][categoria] != -1:
+                        print("Essa combinação já foi utilizada.")
+                        continue
+ 
+                todos_dados = dados_rolados + dg
+                pontos_simples = calcula_pontos_regra_simples(todos_dados)
+                pontos_avancado = calcula_pontos_regra_avancada(todos_dados)
+ 
+                if categoria in combinacoes_simples:
+                    chave = int(categoria)
+                    cartela['regra_simples'][chave] = pontos_simples[chave]
+                else:
+                    cartela['regra_avancada'][categoria] = pontos_avancado[categoria]
+ 
+                jogada_feita = True
+                rodada_encerrada = True
+ 
+            if rodada_encerrada:
+                dados_rolados = rolar_dados(5)
+                dg = []
+                k = 0
+ 
+        else:
+            print("Opção inválida. Tente novamente.")
+            continue
+ 
+        if not rodada_encerrada:
+            print(f"Dados rolados: {dados_rolados}")
+            print(f"Dados guardados: {dg}")
+            print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
+ 
+    if i < 11:
+        print(f"Dados rolados: {dados_rolados}")
+        print(f"Dados guardados: {dg}")
+        print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
+ 
+pontuacao = 0
+soma_simples = 0
+ 
+for chave, valor in cartela['regra_simples'].items():
+    if valor != -1:
+        pontuacao += valor
+        soma_simples += valor
+ 
+for chave, valor in cartela['regra_avancada'].items():
+    if valor != -1:
+        pontuacao += valor
+ 
+if soma_simples >= 63:
+    pontuacao += 35
+ 
+imprime_cartela(cartela)
+print(f"Pontuação total: {pontuacao}")
