@@ -114,9 +114,13 @@ def faz_jogada(lista_dados, categoria, dicionario):
     for chave, valor in pontos_simples.items():
         if chave == categoria:
             dicionario["regra_simples"][categoria] = valor
+        else:
+            dicionario["regra_simples"][categoria] = None
     for chave, valor in pontos_avancado.items():
         if chave == categoria:
             dicionario["regra_avancada"][categoria] = valor
+        else:
+            dicionario["regra_avancada"][categoria] = None
     return dicionario
 
 def imprime_cartela(cartela):
